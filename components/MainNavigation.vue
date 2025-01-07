@@ -5,7 +5,7 @@
         <div class="flex space-x-7">
           <div>
             <NuxtLink to="/" class="flex items-center py-4 px-2">
-              <span class="font-semibold text-gray-500 text-lg">Ekobilans</span>
+              <span class="text-gray-500 text-lg hover:text-green-500 font-semibold">Ekobilans</span>
             </NuxtLink>
           </div>
           <div class="hidden md:flex items-center space-x-1">
@@ -16,7 +16,7 @@
               <div v-if="menuItem.submenu" class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
                 <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                   <template v-for="(subItem, subIndex) in menuItem.submenu" :key="subIndex">
-                    <NuxtLink v-if="!subItem.submenu" :to="subItem.link" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
+                    <NuxtLink v-if="!subItem.submenu" :to="subItem.link" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-500" role="menuitem">
                       {{ subItem.name }}
                     </NuxtLink>
                     <div v-else class="relative group">
